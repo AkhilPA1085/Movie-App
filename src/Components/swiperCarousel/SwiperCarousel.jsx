@@ -7,26 +7,30 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import "./style.scss";
 
 import { Pagination, Navigation } from "swiper";
 import ContentWrapper from "../contentWrapper/ContentWrapper";
 import Img from "../LazyLoadingImage/Img";
 import CircleRating from "../circleRating/CircleRating";
-import Genrs from "../genrs/Genrs";
 
 import { useSelector } from "react-redux";
 import dayjs from "dayjs";
+import Genres from "../genres/Genres";
+import { useNavigate } from "react-router-dom";
 
-const SwiperCarousel = ({ data, loading }) => {
+import Download from "../../assets/download.jpg";
+import "./style.scss";
+
+const SwiperCarousel = ({ data, loading ,endpoint }) => {
   const { url } = useSelector((state) => state.home);
+  const navigate = useNavigate();
   return (
     <ContentWrapper>
       <Swiper
         navigation={true}
         breakpoints={{
           640: {
-            slidesPerView: 1,
+            slidesPerView: 1.2,
             spaceBetween: 20,
           },
           768: {
@@ -38,6 +42,7 @@ const SwiperCarousel = ({ data, loading }) => {
             spaceBetween: 20,
           },
         }}
+        loop={true}
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
@@ -45,12 +50,13 @@ const SwiperCarousel = ({ data, loading }) => {
           <>
             {data?.map((item) => {
               const ImgUrl = item.backdrop_path
-                ? url.poster + item.backdrop_path
-                : Download;
-              return (
-                <SwiperSlide key={item.id}>
+                ? url.poster + item.backdrop_path : Download;
+                return (
+                <SwiperSlide
+                  key={item.id}
+                  onClick={() => navigate(`/${item.media_type || endpoint}/${item.id}`)}>
                   <div className="posterBlock">
-                    <Img src={ImgUrl} />
+                    <Img src={ImgUrl}/>
                     <div className="title">
                       {item.original_title ? item.original_title : item.name}
                     </div>
@@ -59,7 +65,7 @@ const SwiperCarousel = ({ data, loading }) => {
                       {dayjs(item.release_date).format("MMM D, YYYY")}
                     </span>
 
-                    <Genrs data={item.genre_ids.slice(0,2)} />
+                    <Genres data={item.genre_ids.slice(0, 2)} />
                   </div>
                 </SwiperSlide>
               );

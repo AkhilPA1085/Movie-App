@@ -1,0 +1,15 @@
+.genres{
+    position: absolute;
+    top: auto;
+    bottom: 25%;
+    right: 0;
+    text-align: end;
+    color: #fff;
+
+    .genre{
+        background-color: var(--pink);
+        padding: 3px;
+        margin: 3px 0px;
+        white-space: nowrap;
+    }
+}
