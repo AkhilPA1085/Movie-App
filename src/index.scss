@@ -1,0 +1,21 @@
+:root{
+    --dark-blue:#0c012f;
+    --btn-bg:linear-gradient(180deg, rgba(238,131,7,1) 50%, rgba(248,248,248,1) 100%);
+    --dark-blue-gradient:linear-gradient(
+        180deg,
+        rgba(4, 21, 45, 0) 0%,
+        #0c012f 79.17%
+    );
+
+    --card-title:#ada8a8;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+body{
+    background-color: var(--dark-blue);
+    margin: 0;
+    padding: 0;
+}

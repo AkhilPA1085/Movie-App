@@ -1,0 +1,13 @@
+.carouselSection{
+    .carouselTitle{
+        color: #fff;
+        font-size: 22px;
+    }
+
+    >.content-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+}

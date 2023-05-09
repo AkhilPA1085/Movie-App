@@ -1,0 +1,15 @@
+.CircularProgressbar{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: auto;
+    flex-shrink: 0;
+    bottom: 15%;
+    left: 0;
+    background: #fff;
+    border-radius: 50%;
+
+    .CircularProgressbar-text{
+        transform: translate(-25%,7%);
+    }
+}

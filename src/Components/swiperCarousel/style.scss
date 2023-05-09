@@ -1,0 +1,68 @@
+.swiper {
+    width: 100%;
+    height: 100%;
+  
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: transparent;
+  
+      /* Center slide text vertically */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .posterBlock{
+        position: relative;
+        
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: relative;
+        }
+
+        .CircularProgressbar{
+          width: 40px;
+          height: 40px;
+          position: absolute;
+          top: auto;
+          flex-shrink: 0;
+          bottom: 30%;
+          left: 0;
+          background: #fff;
+          border-radius: 50%;
+        }
+
+        .title{
+          color: #fff;
+          font-size: 14px;
+          text-align: left;
+          text-transform: capitalize;
+          font-weight: 500;
+          margin-top: 20px;
+        }
+
+        .date{
+          text-align: left;
+          color: #fff;
+          display: flex;
+          font-size: 12px;
+          opacity: 0.75;
+        }
+
+
+      }
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+      top: 30%;
+    }
+  }
+
+  span{
+    color: #fff;
+  }
+  
