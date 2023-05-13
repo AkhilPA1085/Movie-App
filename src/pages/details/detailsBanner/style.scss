@@ -1,0 +1,108 @@
+@import "../../../mixin.scss";
+
+.detailsBanner{
+    position: relative;
+    height: 80vh;
+
+    img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .bottom-overlay{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: var(--dark-blue-gradient);
+        width: 100%;
+        height: 100%;
+    }
+}
+.content-wrapper{
+    .top-row{
+        margin: 0 !important;
+        padding-top: 80px;
+    }
+
+    .row{
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        gap: 25px;
+        margin-top: 30px;
+        @include md {
+            margin-top: 30px;
+            gap: 50px;
+            flex-direction: row;
+        }
+
+        .left {
+            flex-shrink: 0;
+            img {
+                width: 100%;
+                display: block;
+                border-radius: 12px;
+                @include md {
+                    max-width: 350px;
+                }
+            }
+        }
+        .right {
+            color: white;
+            .title {
+                font-size: 28px;
+                line-height: 40px;
+                @include md {
+                    font-size: 34px;
+                    line-height: 44px;
+                }
+            }
+
+            .genres{
+                display: flex;
+                gap: 20px;
+                position: relative;
+                bottom: 0;
+                top: 20px;
+            }
+            .icons-row{
+                align-items: start;
+                @include md{
+                    align-items: center;
+                }
+                .CircularProgressbar {
+                    position: relative;
+                    bottom: 0;
+                }
+            }
+            
+            .content-col{
+                span{
+                    color: var(--card-title);
+                }
+            }
+
+            .basic-details-list{
+                list-style: none;
+                padding: 0;
+
+                .basic-details-list-item{
+                    padding: 20px 0px;
+                    border-bottom: 1px solid var(--card-title);
+
+                    h3{
+                        margin-bottom: 10px;
+                    }
+
+                    span{
+                        font-size: 18px;
+                        color: var(--card-title);
+                    }
+                }
+            }
+        }
+
+    }
+}

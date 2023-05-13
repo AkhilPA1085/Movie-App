@@ -3,7 +3,6 @@ import "../style.scss"
 import ContentWrapper from '../../../Components/contentWrapper/ContentWrapper'
 import SwitchingTab from '../../../Components/SwitchingTab/SwitchingTab'
 import useFetch from '../../../hooks/useFetch';
-import Carousel from '../../../Components/Carousel/Carousel';
 import SwiperCarousel from '../../../Components/swiperCarousel/SwiperCarousel';
 
 const Popular = () => {
@@ -19,7 +18,7 @@ const Popular = () => {
             <span className="carouselTitle">What's Popular</span>
             <SwitchingTab data={['movies','tv shows']} onTabChange={onTabChange}/>
         </ContentWrapper>
-        <SwiperCarousel data={data?.results} loading={loading} endpoint/>
+        <SwiperCarousel data={data?.results} loading={loading} endpoint={endpoint}/>
     </div>
   )
 }

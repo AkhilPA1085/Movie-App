@@ -1,0 +1,21 @@
+@import "../../mixin.scss";
+.search-results{
+    padding-top: 80px;
+     h2{
+        color: #fff;
+        margin-bottom: 20px;
+     }
+
+     .cards-row{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        @include sm{
+            grid-template-columns: repeat(2,1fr);
+            gap: 20px;
+        }
+        @include md{
+            grid-template-columns: repeat(5,1fr);
+            gap: 20px;
+        }
+     }
+}

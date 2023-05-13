@@ -18,7 +18,7 @@ const Trending = () => {
             <span className="carouselTitle">Trending</span>
             <SwitchingTab data={['day','week']} onTabChange={onTabChange}/>
         </ContentWrapper>
-        <SwiperCarousel data={data?.results} loading={loading}/>
+        <SwiperCarousel data={data?.results} loading={loading} endpoint = {endpoint}/>
     </div>
   )
 }

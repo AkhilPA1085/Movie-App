@@ -1,0 +1,11 @@
+.movie-card{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .title-container{
+        padding: 1rem 0rem;
+        color: #fff;
+        margin-top: auto;
+    }
+}

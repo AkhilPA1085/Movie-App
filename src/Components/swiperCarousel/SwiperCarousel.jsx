@@ -6,9 +6,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
-
 import { Pagination, Navigation } from "swiper";
+
 import ContentWrapper from "../contentWrapper/ContentWrapper";
 import Img from "../LazyLoadingImage/Img";
 import CircleRating from "../circleRating/CircleRating";

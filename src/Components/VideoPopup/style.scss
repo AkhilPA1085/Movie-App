@@ -1,0 +1,46 @@
+.popup-video-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9;
+
+    &.visible{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .opacityLayer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(3.5px);
+        -webkit-backdrop-filter: blur(3.5px);
+        opacity: 0;
+        transition: opacity 400ms;
+    }
+
+    .videoPlayer{
+        position: relative;
+
+        .close-btn{
+            cursor: pointer;
+            margin-bottom: 20px;
+            font-weight: 700;
+            float: right;
+            position: absolute;
+            right: 0;
+            top: -20px;
+        }
+    }
+
+}
